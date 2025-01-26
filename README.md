@@ -1,1 +1,5 @@
-# CineSphere
+🎬 CineSphere CineSphere é um aplicativo simples para explorar, pesquisar e acompanhar seus filmes favoritos. Desenvolvido em SwiftUI usando o padrão arquitetural MVVM, o app oferece uma interface intuitiva para organizar e navegar por conteúdos relacionados a filmes.
+🚀 Funcionalidades 🏠 Home: Descubra os destaques e recomendações de filmes.
+🔍 Search: Encontre seus filmes rapidamente.
+👤 Profile Gerencie suas preferências e acompanhe sua lista personalizada de favoritos.
+🛠 Tecnologias Utilizadas Linguagem: Swift Framework: SwiftUI Arquitetura: MVVM (Model-View-ViewModel) Ícones: SF Symbols (ícones nativos do iOS) 📂 Estrutura do Projeto plaintext Copiar Editar CineSphere/ ├── Models/ │ └── TabItem.swift # Estrutura para representar uma aba da TabBar ├── ViewModels/ │ └── TabBarViewModel.swift # Lógica de negócio da TabBar ├── Views/ │ ├── ContentView.swift # TabBar e navegação principal │ ├── HomeView.swift # Tela inicial com filmes em destaque │ ├── SearchView.swift # Tela de pesquisa │ └── ProfileView.swift # Tela de perfil ├── Assets/ # Imagens e recursos visuais 
