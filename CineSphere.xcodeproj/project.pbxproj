@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33B3BE5F2D4DA92500B61042 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE5E2D4DA92500B61042 /* HomeViewModel.swift */; };
+		33B3BE612D4DA96800B61042 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE602D4DA96800B61042 /* Movie.swift */; };
+		33B3BE632D4FC63000B61042 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE622D4FC63000B61042 /* SearchViewModel.swift */; };
+		33B3BE682D4FCA1200B61042 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE672D4FCA1200B61042 /* MovieService.swift */; };
 		33FC36BD2D46DA9C000175A4 /* CineSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC36BC2D46DA9C000175A4 /* CineSphereApp.swift */; };
 		33FC36BF2D46DA9C000175A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC36BE2D46DA9C000175A4 /* ContentView.swift */; };
 		33FC36C12D46DA9E000175A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FC36C02D46DA9E000175A4 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33B3BE5E2D4DA92500B61042 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		33B3BE602D4DA96800B61042 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		33B3BE622D4FC63000B61042 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		33B3BE672D4FCA1200B61042 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		33FC36B92D46DA9C000175A4 /* CineSphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineSphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FC36BC2D46DA9C000175A4 /* CineSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSphereApp.swift; sourceTree = "<group>"; };
 		33FC36BE2D46DA9C000175A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B3BE662D4FCA0700B61042 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				33B3BE672D4FCA1200B61042 /* MovieService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		33FC36B02D46DA9C000175A4 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +77,7 @@
 		33FC36BB2D46DA9C000175A4 /* CineSphere */ = {
 			isa = PBXGroup;
 			children = (
+				33B3BE662D4FCA0700B61042 /* Service */,
 				33FC36CC2D46DABF000175A4 /* ViewModel */,
 				33FC36CB2D46DAB7000175A4 /* View */,
 				33FC36CA2D46DAA7000175A4 /* Model */,
@@ -84,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				33FC36CD2D46DAE3000175A4 /* TabItem.swift */,
+				33B3BE602D4DA96800B61042 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				33FC36CF2D46DB05000175A4 /* TabBarViewModel.swift */,
+				33B3BE5E2D4DA92500B61042 /* HomeViewModel.swift */,
+				33B3BE622D4FC63000B61042 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,7 +198,11 @@
 			files = (
 				33FC36D02D46DB05000175A4 /* TabBarViewModel.swift in Sources */,
 				33FC36BF2D46DA9C000175A4 /* ContentView.swift in Sources */,
+				33B3BE682D4FCA1200B61042 /* MovieService.swift in Sources */,
+				33B3BE612D4DA96800B61042 /* Movie.swift in Sources */,
 				33FC36BD2D46DA9C000175A4 /* CineSphereApp.swift in Sources */,
+				33B3BE632D4FC63000B61042 /* SearchViewModel.swift in Sources */,
+				33B3BE5F2D4DA92500B61042 /* HomeViewModel.swift in Sources */,
 				33FC36D22D46DB37000175A4 /* HomeView.swift in Sources */,
 				33FC36D42D46DB50000175A4 /* SearchView.swift in Sources */,
 				33FC36D62D46DB67000175A4 /* ProfileView.swift in Sources */,
