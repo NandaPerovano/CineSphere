@@ -11,13 +11,15 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
 
     var body: some View {
-        NavigationView {
-            List(viewModel.movies) { movie in
-                MovieRow(movie: movie)
-            }
-            .navigationTitle("🎬 Filmes")
-        }
-    }
+         NavigationView {
+             List(viewModel.movies) { movie in
+                 NavigationLink(destination: MovieDetailView(movie: movie)) {
+                     MovieRow(movie: movie)
+                 }
+             }
+             .navigationTitle("🎬 Filmes")
+         }
+     }
 }
 
 struct MovieRow: View {
@@ -35,11 +37,6 @@ struct MovieRow: View {
                 Text(movie.title)
                     .font(.headline)
                     .foregroundColor(.primary)
-
-                Text(movie.description)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .lineLimit(2)
             }
             .padding(.leading, 8)
         }
@@ -47,3 +44,6 @@ struct MovieRow: View {
     }
 }
 
+#Preview {
+    ContentView()
+}

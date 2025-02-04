@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 class TabBarViewModel: ObservableObject {
     @Published var tabs: [TabItem] = [
         TabItem(title: "Home", icon: "house.fill", view: AnyView(HomeView())),
