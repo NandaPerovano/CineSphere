@@ -20,15 +20,25 @@ struct MovieDetailView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 300)
                     .cornerRadius(20)
-
+                    .padding(.bottom, 20)
+                
                 VStack(alignment: .leading) {
                     Text(movie.title)
                         .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .center)
                         .bold()
+                        .padding(.bottom, 20)
                     
-                    Text("Ano de lançamento: \(movie.releaseYear)")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                    HStack {
+                        Text("Ano de lançamento:")
+                            .font(.headline)
+                            .foregroundColor(.red)
+                        
+                        Text("\(movie.releaseYear)")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding(.leading, 10)
+                    }
                 }
                 
                 Divider()
