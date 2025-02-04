@@ -20,9 +20,11 @@ struct SearchView: View {
                     .padding(.horizontal)
 
                 List(viewModel.filteredMovies) { movie in
-                    Text(movie.title) 
-                        .font(.headline)
-                        .padding(.vertical, 5)
+                    NavigationLink(destination: MovieDetailView(movie: movie)) {
+                        Text(movie.title)
+                            .font(.headline)
+                            .padding(.vertical, 5)
+                    }
                 }
             }
             .navigationTitle("🔍 Buscar Filmes")
@@ -30,3 +32,6 @@ struct SearchView: View {
     }
 }
 
+#Preview {
+    ContentView()
+}
