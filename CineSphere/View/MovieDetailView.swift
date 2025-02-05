@@ -17,10 +17,16 @@ struct MovieDetailView: View {
                 Image(movie.imageName)
                     .resizable()
                     .scaledToFit()
-                    .frame(maxWidth: .infinity)
                     .frame(height: 300)
-                    .cornerRadius(20)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                    )
+                    .shadow(radius: 5)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.bottom, 20)
+
                 
                 VStack(alignment: .leading) {
                     Text(movie.title)
@@ -69,7 +75,6 @@ struct MovieDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(movie.title)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
