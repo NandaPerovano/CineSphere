@@ -12,7 +12,7 @@ struct Movie: Identifiable {
     let title: String
     let description: String
     let imageName: String
-    let releaseYear: Int
+    let releaseYear: String
     let detailedDescription: String
     let mainActors: [String]
 }
