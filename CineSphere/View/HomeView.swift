@@ -60,5 +60,5 @@ struct MovieRow: View {
 }
 
 #Preview {
-    ContentView().environmentObject(FavoritesViewModel()) // Passa o ViewModel corretamente
+    ContentView().environmentObject(FavoritesViewModel()) 
 }

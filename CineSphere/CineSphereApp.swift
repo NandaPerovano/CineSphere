@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CineSphereApp: App {
+    @StateObject private var favoritesViewModel = FavoritesViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoritesViewModel)
         }
     }
 }

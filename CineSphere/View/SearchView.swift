@@ -33,5 +33,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(FavoritesViewModel())
 }
