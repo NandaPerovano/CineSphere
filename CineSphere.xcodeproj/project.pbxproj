@@ -12,6 +12,8 @@
 		33B3BE632D4FC63000B61042 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE622D4FC63000B61042 /* SearchViewModel.swift */; };
 		33B3BE682D4FCA1200B61042 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE672D4FCA1200B61042 /* MovieService.swift */; };
 		33B3BE6A2D503AB200B61042 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE692D503AB200B61042 /* MovieDetailView.swift */; };
+		33B3BE742D5583E800B61042 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE732D5583E800B61042 /* FavoritesViewModel.swift */; };
+		33B3BE762D55851A00B61042 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3BE752D55851A00B61042 /* FavoritesView.swift */; };
 		33FC36BD2D46DA9C000175A4 /* CineSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC36BC2D46DA9C000175A4 /* CineSphereApp.swift */; };
 		33FC36BF2D46DA9C000175A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC36BE2D46DA9C000175A4 /* ContentView.swift */; };
 		33FC36C12D46DA9E000175A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FC36C02D46DA9E000175A4 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		33B3BE622D4FC63000B61042 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		33B3BE672D4FCA1200B61042 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		33B3BE692D503AB200B61042 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		33B3BE732D5583E800B61042 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		33B3BE752D55851A00B61042 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		33FC36B92D46DA9C000175A4 /* CineSphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineSphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FC36BC2D46DA9C000175A4 /* CineSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSphereApp.swift; sourceTree = "<group>"; };
 		33FC36BE2D46DA9C000175A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				33FC36D32D46DB50000175A4 /* SearchView.swift */,
 				33FC36D52D46DB67000175A4 /* ProfileView.swift */,
 				33B3BE692D503AB200B61042 /* MovieDetailView.swift */,
+				33B3BE752D55851A00B61042 /* FavoritesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				33FC36CF2D46DB05000175A4 /* TabBarViewModel.swift */,
 				33B3BE5E2D4DA92500B61042 /* HomeViewModel.swift */,
 				33B3BE622D4FC63000B61042 /* SearchViewModel.swift */,
+				33B3BE732D5583E800B61042 /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B3BE742D5583E800B61042 /* FavoritesViewModel.swift in Sources */,
 				33FC36D02D46DB05000175A4 /* TabBarViewModel.swift in Sources */,
 				33FC36BF2D46DA9C000175A4 /* ContentView.swift in Sources */,
 				33B3BE682D4FCA1200B61042 /* MovieService.swift in Sources */,
@@ -206,6 +213,7 @@
 				33FC36BD2D46DA9C000175A4 /* CineSphereApp.swift in Sources */,
 				33B3BE632D4FC63000B61042 /* SearchViewModel.swift in Sources */,
 				33B3BE6A2D503AB200B61042 /* MovieDetailView.swift in Sources */,
+				33B3BE762D55851A00B61042 /* FavoritesView.swift in Sources */,
 				33B3BE5F2D4DA92500B61042 /* HomeViewModel.swift in Sources */,
 				33FC36D22D46DB37000175A4 /* HomeView.swift in Sources */,
 				33FC36D42D46DB50000175A4 /* SearchView.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
+    @EnvironmentObject var favoritesViewModel: FavoritesViewModel
 
     var body: some View {
         NavigationView {
@@ -24,7 +25,7 @@ struct HomeView: View {
 
 struct MovieRow: View {
     let movie: Movie
-    @State private var isFavorite = false // Estado para controlar favorito
+    @EnvironmentObject var favoritesViewModel: FavoritesViewModel
 
     var body: some View {
         HStack {
@@ -40,19 +41,18 @@ struct MovieRow: View {
                         .font(.headline)
                         .foregroundColor(.primary)
                     
-                    Spacer() 
+                    Spacer() // Empurra o botão para a direita
                     
                     Button(action: {
-                        isFavorite.toggle()
+                        favoritesViewModel.toggleFavorite(movie: movie)
                     }) {
-                        Image(systemName: isFavorite ? "heart.fill" : "heart")
-                            .foregroundColor(isFavorite ? .red : .gray)
+                        Image(systemName: favoritesViewModel.isFavorite(movie: movie) ? "heart.fill" : "heart")
+                            .foregroundColor(favoritesViewModel.isFavorite(movie: movie) ? .red : .gray)
                             .font(.title2)
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
             }
-
             .padding(.leading, 8)
         }
         .padding(.vertical, 5)
@@ -60,5 +60,5 @@ struct MovieRow: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(FavoritesViewModel()) // Passa o ViewModel corretamente
 }
