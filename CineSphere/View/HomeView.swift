@@ -33,7 +33,7 @@ struct MovieRow: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 80, height: 120)
-                .cornerRadius(8)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
@@ -41,7 +41,7 @@ struct MovieRow: View {
                         .font(.headline)
                         .foregroundColor(.primary)
                     
-                    Spacer() // Empurra o botão para a direita
+                    Spacer() 
                     
                     Button(action: {
                         favoritesViewModel.toggleFavorite(movie: movie)
