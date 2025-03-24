@@ -12,7 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(viewModel.movies) { movie in
                 NavigationLink(destination: MovieDetailView(movie: movie)) {
                     MovieRow(movie: movie)

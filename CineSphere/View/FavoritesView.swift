@@ -11,7 +11,7 @@ struct FavoritesView: View {
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(favoritesViewModel.favoriteMovies) { movie in
                 NavigationLink(destination: MovieDetailView(movie: movie)) {
                     MovieRow(movie: movie)

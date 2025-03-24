@@ -11,7 +11,7 @@ struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 TextField("Buscar filmes...", text: $viewModel.searchText)
                     .padding(10)
