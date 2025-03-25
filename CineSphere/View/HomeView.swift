@@ -7,18 +7,32 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
-
+    @AppStorage("userName") private var name: String = ""
+    
     var body: some View {
         NavigationStack {
-            List(viewModel.movies) { movie in
-                NavigationLink(destination: MovieDetailView(movie: movie)) {
-                    MovieRow(movie: movie)
+            VStack(alignment: .leading) {
+                if !name.isEmpty {
+                    Text("Olá, \(name)!")
+                        .italic()
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(.red)
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
+                Spacer()
+                List(viewModel.movies) { movie in
+                    NavigationLink(destination: MovieDetailView(movie: movie)) {
+                        MovieRow(movie: movie)
+                    }
+                }
+                .navigationTitle(" 🎬 Filmes")
             }
-            .navigationTitle("🎬 Filmes")
         }
     }
 }

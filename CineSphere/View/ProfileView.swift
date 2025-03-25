@@ -7,10 +7,20 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct ProfileView: View {
+    @AppStorage("userName") var name: String = ""
+    
     var body: some View {
-        Text("Profile Screen")
-            .font(.largeTitle)
-            .padding()
+        Form {
+            Section(header: Text("Informações do Usuário")) {
+                TextField("Insira seu nome", text: $name)
+            }
+        }
     }
+}
+
+#Preview {
+    ContentView().environmentObject(FavoritesViewModel())
 }
