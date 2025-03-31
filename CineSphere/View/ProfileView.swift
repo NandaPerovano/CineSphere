@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ProfileView: View {
     @AppStorage("userName") var name: String = ""
     
