@@ -14,24 +14,28 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 if !name.isEmpty {
                     Text("Olá, \(name)!")
                         .italic()
                         .font(.largeTitle)
-                        .bold()
+                        //.bold()
                         .foregroundStyle(.red)
-                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.horizontal)
+                        .padding(.top, 8)
                 }
-                Spacer()
                 List(viewModel.movies) { movie in
                     NavigationLink(destination: MovieDetailView(movie: movie)) {
                         MovieRow(movie: movie)
                     }
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color(.systemGray6))
                 }
-                .navigationTitle(" 🎬 Filmes")
+                .listStyle(.plain)
+                .navigationTitle("🎬 Filmes")
             }
         }
+
     }
 }
 
