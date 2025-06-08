@@ -62,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		335E66262DF6385E007AD172 /* PersistentController */ = {
+			isa = PBXGroup;
+			children = (
+				335E66222DF0827D007AD172 /* PersistenceController.swift */,
+			);
+			path = PersistentController;
+			sourceTree = "<group>";
+		};
 		33B3BE662D4FCA0700B61042 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +98,7 @@
 		33FC36BB2D46DA9C000175A4 /* CineSphere */ = {
 			isa = PBXGroup;
 			children = (
+				335E66262DF6385E007AD172 /* PersistentController */,
 				33B3BE662D4FCA0700B61042 /* Service */,
 				33FC36CC2D46DABF000175A4 /* ViewModel */,
 				33FC36CB2D46DAB7000175A4 /* View */,
@@ -98,8 +107,6 @@
 				33FC36BE2D46DA9C000175A4 /* ContentView.swift */,
 				33FC36C02D46DA9E000175A4 /* Assets.xcassets */,
 				33FC36C22D46DA9E000175A4 /* Preview Content */,
-				335E66222DF0827D007AD172 /* PersistenceController.swift */,
-				335E66242DF082C2007AD172 /* RatingViewModel.swift */,
 			);
 			path = CineSphere;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 				33B3BE5E2D4DA92500B61042 /* HomeViewModel.swift */,
 				33B3BE622D4FC63000B61042 /* SearchViewModel.swift */,
 				33B3BE732D5583E800B61042 /* FavoritesViewModel.swift */,
+				335E66242DF082C2007AD172 /* RatingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
