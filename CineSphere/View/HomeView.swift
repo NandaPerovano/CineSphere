@@ -19,7 +19,6 @@ struct HomeView: View {
                     Text("Olá, \(name)!")
                         .italic()
                         .font(.largeTitle)
-                        //.bold()
                         .foregroundStyle(.red)
                         .padding(.horizontal)
                         .padding(.top, 8)
