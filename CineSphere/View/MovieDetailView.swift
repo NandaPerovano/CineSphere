@@ -10,7 +10,9 @@ import SwiftUI
 struct MovieDetailView: View {
     let movie: Movie
     @State private var rating: Int = 0 
-    
+    @EnvironmentObject var ratingVM: RatingViewModel
+    @Environment(\.managedObjectContext) private var viewContext
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -41,6 +43,7 @@ struct MovieDetailView: View {
                                 .font(.system(size: 16))
                                 .onTapGesture {
                                     rating = index
+                                    ratingVM.saveRating(for: movie.title, value: index)
                                 }
                         }
                     }
@@ -86,6 +89,9 @@ struct MovieDetailView: View {
                 Spacer()
             }
             .padding()
+        }
+        .onAppear {
+            rating = ratingVM.fetchRating(for: movie.title)
         }
         .navigationBarTitleDisplayMode(.inline)
     }
