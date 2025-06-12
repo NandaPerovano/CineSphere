@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
@@ -32,11 +34,14 @@ struct HomeView: View {
                 }
                 .listStyle(.plain)
                 .navigationTitle("🎬 Filmes")
+                .onAppear {
+                    favoritesViewModel.fetchFavorites()
+                }
             }
         }
-
     }
 }
+
 
 struct MovieRow: View {
     let movie: Movie
