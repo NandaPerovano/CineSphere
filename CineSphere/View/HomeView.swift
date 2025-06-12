@@ -20,7 +20,7 @@ struct HomeView: View {
                 if !name.isEmpty {
                     Text("Olá, \(name)!")
                         .italic()
-                        .font(.largeTitle)
+                        .font(.title3)
                         .foregroundStyle(.red)
                         .padding(.horizontal)
                         .padding(.top, 8)
