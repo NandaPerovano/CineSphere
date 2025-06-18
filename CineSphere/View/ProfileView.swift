@@ -7,8 +7,15 @@
 
 import SwiftUI
 import PhotosUI
+import CoreData
 
 struct ProfileView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        entity: UserProfile.entity(),
+        sortDescriptors: []
+    ) private var profiles: FetchedResults<UserProfile>
+    
     @AppStorage("userName") var name: String = ""
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var profileImage: UIImage? = nil
@@ -43,6 +50,7 @@ struct ProfileView: View {
                             if let data = try? await newItem?.loadTransferable(type: Data.self),
                                let uiImage = UIImage(data: data) {
                                 profileImage = uiImage
+                                saveProfileImageToCoreData(data: data)
                             }
                         }
                     }
@@ -50,9 +58,43 @@ struct ProfileView: View {
 
                 Section(header: Text("Informações do Usuário")) {
                     TextField("Insira seu nome", text: $name)
+                        .onChange(of: name) { _ in
+                            saveNameToCoreData()
+                        }
                 }
             }
             .navigationTitle("Perfil")
+            .onAppear {
+                loadProfile()
+            }
+        }
+    }
+
+    private func saveProfileImageToCoreData(data: Data) {
+        let profile = profiles.first ?? UserProfile(context: viewContext)
+        profile.profileImage = data
+        saveContext()
+    }
+
+    private func saveNameToCoreData() {
+        let profile = profiles.first ?? UserProfile(context: viewContext)
+        profile.name = name
+        saveContext()
+    }
+
+    private func loadProfile() {
+        guard let profile = profiles.first else { return }
+        if let data = profile.profileImage {
+            profileImage = UIImage(data: data)
+        }
+        name = profile.name ?? ""
+    }
+
+    private func saveContext() {
+        do {
+            try viewContext.save()
+        } catch {
+            print("Erro ao salvar no Core Data: \(error.localizedDescription)")
         }
     }
 }
