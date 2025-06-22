@@ -63,7 +63,7 @@ struct ProfileView: View {
                         }
                 }
             }
-            .navigationTitle("Perfil")
+            .navigationTitle("🧑‍💻 Perfil")
             .onAppear {
                 loadProfile()
             }
